@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>exo Api JS</title>
+ <script src="exo-14-api.js" async></script>
+</head>
+<body>
+    <div class="apiContact"></div>
+    <p>Le premier console.log() est celui de la<br> 
+        <strong>"const data = await fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m');"</strong><br>
+        C’est un objet de type Response qui contient plusieurs propriétés comme ok ou status : 200 (le
+        contact avec l’api s’est bien passé)<br>
+        On peut aussi gérer cela en JS pour des cas d’erreurs…
+    </p>
+    <p>Le second console.log() est celui de la<br> 
+        <strong>"const dataTransformed = await data.json();"</strong><br>
+        <strong>apiDiv.innerText = dataTransformed.latitude;</strong><br>
+        Il correspond aux données transformées en objet JS via la fonction .json()<br>
+        C’est là que l’on peut voir les données fournies par l’api une fois transformées, on accède alors aux
+        données comme en mode objet (la latitude)
+    </p>
+</body>
+</html> 
